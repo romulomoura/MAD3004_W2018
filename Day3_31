@@ -1,0 +1,165 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+var str = "Hello, playground"
+
+
+/*func display()
+{
+    print("Romulo Moura")
+}*/
+
+//display()
+
+func display(name: String)
+{
+    print("Welcome, \(name)")
+}
+display(name:"Romulo Moura")
+ 
+func display(number n: Int)
+{
+    for i in 1...n
+    {
+        print(i)
+    }
+}
+display(number:5)
+
+func sum(_ a: Int, b: Int)
+{
+    print("Sum: \(a+b)")
+}
+sum(10, b:20)
+
+
+func sum(of a: Int, and b: Int)
+{
+    print("Add: \(a+b)")
+}
+sum(of:10, and:20)
+
+func greet() -> String
+{
+    return "Welcome to Toronto"
+}
+
+var s = greet()
+print(s)
+print(greet())
+
+func testreturn(_ a: Int) -> Int
+{
+    return a
+}
+
+func testreturn(_ b: Float) -> Float
+{
+    return b
+}
+
+func testreturn(_ c: String) -> String
+{
+    return c
+}
+
+print(testreturn(1))
+print(testreturn(1.1))
+print(testreturn("String"))
+
+
+func add(a : Int, b : Int) -> Int
+{
+    return a + b
+}
+
+func add(a : Float, b : Float) -> Float
+{
+    return a + b
+}
+
+func add(a : String, b : String) -> String
+{
+    return a + b
+}
+
+print(add(a :10, b: 5))
+print(add(a: 10.5, b: 30.5))
+print(add(a: "String " , b: " String 2"))
+
+
+//Return Tuples
+func swip(a: String, b: String) -> (String, String)
+{
+    return (b, a)
+}
+let x = swip(a: "Pritesh", b: "Patel")
+print(x.0, x.1)
+
+func swip(a: Int, b: Int) -> (a:Int, b:Int)
+{
+    return (b,a)
+}
+
+let z = swip(a:100, b:200)
+print(z.a, z.b)
+
+
+
+func test_array(arr:[Int]) -> Int
+{
+    var add = 0
+    for i in arr
+    {
+        add = add + i
+    }
+    return add
+}
+
+print(test_array(arr:[1,2,3]))
+
+var na = [200,30,50,60,800,100]
+
+func findMinMax(arr:[Int]) -> (min:Int, max:Int)
+{
+    return (arr.min() ?? 0, arr.max() ?? 0)
+}
+
+print(findMinMax(arr: []))
+var minmax = findMinMax(arr: na)
+print(minmax.min, minmax.max)
+
+
+
+func CalcJuros (_ total: Double, _ anos: Int=2, _ taxa: Float=0.5) -> Double
+{
+    return (total * Double(anos) * Double(taxa))
+}
+
+print(CalcJuros(100,2,0.05))
+
+
+func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+
+
+var x1 = 100
+var x2 = 200
+
+print(x1, x2)
+swapTwoInts(&x1, &x2)
+print(x1, x2)
+
+		
+
+
+
+
+
+
+
+
