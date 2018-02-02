@@ -1,0 +1,65 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+var str = "Hello, playground"
+
+
+class college
+{
+    var cid: Int?
+    var cname: String!
+    var caddress: String!
+    var cphoneno: String
+    
+   init()
+    {
+        self.cid = -1
+        self.cname = ""
+        self.caddress = ""
+        self.cphoneno = ""
+    }
+    
+    init(cid: Int, cname: String, caddress: String, cphoneno: String)
+    {
+        self.cid = cid
+        self.cname = cname
+        self.caddress = caddress
+        self.cphoneno = cphoneno
+    }
+    
+    
+    func display()
+    {
+        print("------------------------------------")
+        print("College ID : \(self.cid!)\nCollege Name: \(self.cname!)\nAddress:\(self.caddress!)\nPhone Number: \(self.cphoneno)")
+    }
+    
+    deinit
+    {
+        print("College Class - Out of Scope/memory")
+    }
+   
+}
+
+
+
+var c1 = college(cid: 1, cname: "Lambton 1", caddress: "265 Yorkland", cphoneno: "123")
+var c2 = college(cid: 2, cname: "Lambton 2", caddress: "271 Yorkland", cphoneno: "1234")
+var c3 = college(cid: 3, cname: "Lambton 3", caddress: "256 Yorkland", cphoneno: "12345")
+var c4 = college(cid: 4, cname: "Lambton 4", caddress: "217 Yorkland", cphoneno: "123456")
+
+var collegeDictionary = [String:college]()
+
+collegeDictionary.updateValue(c1, forKey: "College1")
+collegeDictionary.updateValue(c2, forKey: "College2")
+collegeDictionary.updateValue(c3, forKey: "College3")
+collegeDictionary.updateValue(c4, forKey: "College4")
+
+//for cObject in collegeDictionary
+
+for cObject in collegeDictionary
+  {
+    let college = cObject.value
+    college.display()
+   }
