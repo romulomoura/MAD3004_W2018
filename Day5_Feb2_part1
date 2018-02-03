@@ -1,0 +1,90 @@
+//
+//  main.swift
+//  Day_Inheritance_W2018
+//
+//  Created by MacStudent on 2018-02-02.
+//  Copyright © 2018 MacStudent. All rights reserved.
+//
+
+import Foundation
+
+
+
+
+class Person
+{
+    var id: Int?
+    var name: String?
+    
+    func displayPerson()
+    {
+        print(id!, name!, separator: " - ")
+    }
+    
+    func printData()
+    {
+        print(id!, name!, separator: " - ")
+    }
+    
+    
+}
+
+class Faculty : Person
+{
+    var salary: Double?
+    
+    func displayFaculty()
+    {
+        super.displayPerson()
+        print(salary!)
+    }
+    
+    
+    override func printData()
+    {
+        super.printData()
+        print(salary!)
+    }
+    
+}
+
+
+class Manager : Person
+{
+    var departmentName: String?
+    
+    func displayManager()
+    {
+        print(id!, name!, departmentName!, separator: " - ")
+    }
+    
+    
+    override func printData()
+    {
+        print(id!, name!, departmentName!, separator: " - ")
+    }
+    
+    
+}
+
+
+var p = Person()
+p.id = 1
+p.name = "Person Name"
+p.displayPerson()
+
+var f = Faculty()
+
+f.id = 1
+f.name = "Faculty Name"
+f.salary = 1000.0
+//f.displayPerson()
+f.displayFaculty()
+
+var m = Manager()
+
+m.id = 1
+m.name = "Manager Name"
+
+//m.displayPerson()
+m.displayManager()
